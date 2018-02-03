@@ -1,0 +1,17 @@
+{
+  "name": "plantagarden",
+  "version": "1.0.0",
+  "description": "vegetable planning app",
+  "main": "index.js",
+  "repository": "https://github.com/jessicaantiope/plantagarden.git",
+  "author": "jessica draper <j.b.draper@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.1"
+  }
+}

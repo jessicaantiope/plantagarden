@@ -7,7 +7,6 @@
     "build": "webpack-dev-server",
     "start": "node server & webpack --watch",
     "test": "jest --watch --noStackTrace"
-  
   },
   "babel": {
     "presets": [

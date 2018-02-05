@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Plant a Garden</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
     <div id="app"></div>
     <script type="text/javascript" src="bundle.js"></script>
+    <div class="columns">
+        <div class="column" id="aboutApp">
+            <h3 class="subtitle">About</h3>
+            <p>Welcome to Plant a Garden.  This is a space for you to plan and create your own vegetable garden.</p>
+        </div>
+        <div class="column" id="createApp">
+            <a class="button is-link is-rounded">Create your own garden</a>
+        </div>
+        <div class="column" id="gardenPictures">
+            <h3 class="subtitle">Pictures</h3>
+            <div>
+                <figure class="image is-250x250">
+                    <img src="images/collection.jpg">
+                </figure>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

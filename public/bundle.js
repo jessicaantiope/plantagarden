@@ -972,12 +972,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var App = function App() {
     return _react2.default.createElement(
-        'div',
-        null,
+        "div",
+        { className: "title" },
         _react2.default.createElement(
-            'h1',
+            "h1",
             null,
-            'Plant a Garden'
+            "Plant a Garden"
         )
     );
 };

@@ -1,0 +1,23 @@
+.title {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 100px;
+    background: aquamarine;
+    padding: 50px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 50px;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+

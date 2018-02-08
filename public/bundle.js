@@ -2355,6 +2355,14 @@ var _Square = __webpack_require__(67);
 
 var _Square2 = _interopRequireDefault(_Square);
 
+var _Home = __webpack_require__(77);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Vegetables = __webpack_require__(78);
+
+var _Vegetables2 = _interopRequireDefault(_Vegetables);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -2373,43 +2381,9 @@ var App = function App() {
                     'Plant a Garden'
                 )
             ),
-            _react2.default.createElement(
-                'div',
-                { className: 'columns' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'column', id: 'aboutApp' },
-                    _react2.default.createElement(
-                        'h3',
-                        { 'class': 'subtitle' },
-                        'About'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'Welcome to Plant a Garden.  This is a space for you to plan and create your own vegetable garden.'
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'column' },
-                    _react2.default.createElement(
-                        'a',
-                        { href: '/#/square', className: 'button is-link is-rounded', id: 'createApp' },
-                        'Create your own garden'
-                    ),
-                    _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Square2.default })
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'column', id: 'gardenPictures' },
-                    _react2.default.createElement(
-                        'figure',
-                        { className: 'image is-250x250' },
-                        _react2.default.createElement('img', { src: 'images/collection.jpg' })
-                    )
-                )
-            )
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Square2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Vegetables2.default })
         )
     );
 };
@@ -7549,15 +7523,26 @@ var Square = function (_React$Component) {
     }
 
     _createClass(Square, [{
-        key: 'render',
+        key: "render",
+
+        // constructor(props) {
+        //     super(props)
+        //     this.state = {
+        //        
+        //     }
+        // }
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "columns" },
                 _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Square Page'
+                    "div",
+                    { className: "column is-two-thirds" },
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        "Hello Square"
+                    )
                 )
             );
         }
@@ -23463,6 +23448,171 @@ function camelize(string) {
 }
 
 module.exports = camelize;
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Home = function (_React$Component) {
+    _inherits(Home, _React$Component);
+
+    function Home() {
+        _classCallCheck(this, Home);
+
+        return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+    }
+
+    _createClass(Home, [{
+        key: "render",
+
+        // constructor(props) {
+        //     super(props)
+        //     this.state = {
+
+        //     }
+        // }
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "columns" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "column", id: "aboutApp" },
+                    _react2.default.createElement(
+                        "h3",
+                        { className: "subtitle" },
+                        "About"
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        null,
+                        "Welcome to Plant a Garden.  This is a space for you to plan and create your own vegetable garden."
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "column" },
+                    _react2.default.createElement(
+                        "a",
+                        { href: "/#/square", className: "button is-link is-rounded", id: "createApp" },
+                        "Create your own garden"
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "column", id: "gardenPictures" },
+                    _react2.default.createElement(
+                        "figure",
+                        { className: "image is-250x250" },
+                        _react2.default.createElement("img", { src: "images/collection.jpg" })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Home;
+}(_react2.default.Component);
+
+exports.default = Home;
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Vegetables = function (_React$Component) {
+    _inherits(Vegetables, _React$Component);
+
+    function Vegetables(props) {
+        _classCallCheck(this, Vegetables);
+
+        var _this = _possibleConstructorReturn(this, (Vegetables.__proto__ || Object.getPrototypeOf(Vegetables)).call(this, props));
+
+        _this.state = {
+            vegetables: [{ name: 'Lettuce', description: 'Leafy' }, { name: 'Beetroot', description: 'Red and earthy' }, { name: 'Capsicum', description: 'Refreshing crunch' }, { name: 'Carrot', description: 'Crunchy' }, { name: 'Corn', description: 'Yellow and juicy' }, { name: 'Zuchinni', description: 'Versitle and green' }, { name: 'Tomato', description: 'Red and round' }, { name: 'Brocolli', description: 'Mini trees' }, { name: 'Cabbage', description: 'Yum' }, { name: 'Chilli', description: 'Hot' }]
+        };
+        return _this;
+    }
+
+    _createClass(Vegetables, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'columns' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'column is-one-third level-right', id: 'vegetableList' },
+                    _react2.default.createElement(
+                        'h1',
+                        null,
+                        'List of vegetables'
+                    ),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        'Name and description'
+                    ),
+                    this.state.vegetables.map(function (vegetable) {
+                        return _react2.default.createElement(
+                            'p',
+                            null,
+                            vegetable.name,
+                            ' - ',
+                            vegetable.description
+                        );
+                    })
+                )
+            );
+        }
+    }]);
+
+    return Vegetables;
+}(_react2.default.Component);
+
+exports.default = Vegetables;
 
 /***/ })
 /******/ ]);

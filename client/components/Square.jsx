@@ -2,11 +2,18 @@ import React from 'react'
 
 
 class Square extends React.Component {
-    
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //        
+    //     }
+    // }
     render () {
         return (
-            <div>
-                <h1>Square Page</h1>
+            <div className="columns">
+                <div className="column is-two-thirds">
+                    <p>Hello Square</p>
+                </div>
             </div>
         )
     }

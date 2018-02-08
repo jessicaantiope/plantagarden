@@ -7,7 +7,8 @@
     "build": "webpack-dev-server",
     "start": "node server & webpack --watch",
     "test": "jest --watch --noStackTrace",
-    "knex": "knex"
+    "knex": "knex",
+    "postinstall": "wepback-dev-server"
   },
   "babel": {
     "presets": [

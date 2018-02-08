@@ -4,11 +4,10 @@
   "description": "vegetable planning app",
   "main": "index.js",
   "scripts": {
-    "build": "webpack-dev-server",
     "start": "node server & webpack --watch",
     "test": "jest --watch --noStackTrace",
     "knex": "knex",
-    "postinstall": "wepback-dev-server"
+    "postinstall": "wepback"
   },
   "babel": {
     "presets": [

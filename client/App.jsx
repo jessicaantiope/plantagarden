@@ -10,7 +10,7 @@ const App = () => {
         <Router>
             <div id="app">
                 <div className="title">
-                    <h1>Plant a Garden</h1>
+                    <h1>Plan<img className="main-logo" src="images/t-logo-white-2.png"></img> a Garden</h1>
                 </div>
                 <Route exact path="/" component={Home} />
                 <Route path="/square" component={Square} />

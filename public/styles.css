@@ -2,9 +2,15 @@
     display: flex;
     color: white;
     justify-content: center;
+    font-family: 'ABeeZee', sans-serif;
     font-size: 80px;
-    background: #7dca5c;
+    background: #00A651;
     padding: 50px;
+}
+
+.main-logo {
+   height: 100px;
+   width: 55px;
 }
 
 .column {
@@ -23,7 +29,7 @@
 }
 
 #createApp {
-    background-color: #7dca5c;
+    background-color: #00A651;
     font-size: 30px;
 }
 

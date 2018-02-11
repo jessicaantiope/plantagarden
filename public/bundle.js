@@ -2378,7 +2378,9 @@ var App = function App() {
                 _react2.default.createElement(
                     'h1',
                     null,
-                    'Plant a Garden'
+                    'Plan',
+                    _react2.default.createElement('img', { className: 'main-logo', src: 'images/t-logo-white-2.png' }),
+                    ' a Garden'
                 )
             ),
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
@@ -7516,21 +7518,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Square = function (_React$Component) {
     _inherits(Square, _React$Component);
 
-    function Square() {
+    function Square(props) {
         _classCallCheck(this, Square);
 
-        return _possibleConstructorReturn(this, (Square.__proto__ || Object.getPrototypeOf(Square)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Square.__proto__ || Object.getPrototypeOf(Square)).call(this, props));
+
+        _this.state = {};
+        return _this;
     }
 
     _createClass(Square, [{
         key: "render",
-
-        // constructor(props) {
-        //     super(props)
-        //     this.state = {
-        //        
-        //     }
-        // }
         value: function render() {
             return _react2.default.createElement(
                 "div",

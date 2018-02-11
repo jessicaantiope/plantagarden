@@ -6,20 +6,18 @@ class Square extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-           
+           garden : [
+               [0,0,0],
+               [0,0,0],
+               [0,0,0],
+           ]
         }
     }
     render () {
         return (
             <div className="columns">
                 <div className="column is-two-thirds">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <Square {...this.state.garden}/>
                 </div>
             </div>
         )

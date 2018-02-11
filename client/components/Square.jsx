@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDataGrid from 'react-data-grid'
 
 
 class Square extends React.Component {
@@ -12,7 +13,13 @@ class Square extends React.Component {
         return (
             <div className="columns">
                 <div className="column is-two-thirds">
-                    <p>Hello Square</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         )

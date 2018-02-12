@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import ReactTooltip from 'react-tooltip'
+import DropVegetables from './DropVegetables'
 
 
 class Vegetables extends React.Component {
@@ -41,6 +42,9 @@ class Vegetables extends React.Component {
                         </a>
                         ))
                     }
+                    <div>
+                        <DropVegetables />
+                    </div>
                 </div>
         )
     }

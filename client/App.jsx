@@ -15,6 +15,10 @@ const App = () => {
                 <Route exact path="/" component={Home} />
                 <Route path="/square" component={Square} />
                 <Route path="/square" component={Vegetables} />
+                <br/>
+                <footer className="footer">
+                <a href="/" className="button is-link is-rounded" id="HomePage">Home</a>
+                </footer>
             </div>
         </Router>
     )

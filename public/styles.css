@@ -6,6 +6,7 @@
     font-size: 80px;
     background: #00A651;
     padding: 50px;
+    margin: 0px;
 }
 
 .main-logo {
@@ -37,10 +38,17 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-
 }
 
+.margin {
+    margin: 20px;
+}
 .veggies {
     height: 60px;
     width: 60px;
+}
+
+.footer {
+    background-color: #00A651;
+    margin-top: 10px;
 }

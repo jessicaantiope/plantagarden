@@ -32,7 +32,7 @@ class Vegetables extends React.Component {
     }
     render () {
         return (
-                <div onClick={this.getVegetable}>
+                <div className="margin" onClick={this.getVegetable}>
                     <h1>Select your vegetables:</h1><br/>
                     {this.state.vegetables.map(vegetable => (
                         <a data-tip={vegetable.name + '-' + vegetable.description}>
@@ -41,6 +41,7 @@ class Vegetables extends React.Component {
                         </a>
                         ))
                     }
+                    
                 </div>
         )
     }

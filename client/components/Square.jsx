@@ -31,7 +31,7 @@ class Square extends React.Component {
                                 )
                             })}
                         </tbody>
-                    </table>
+                    </table> 
                 </div>
             </div>
         )

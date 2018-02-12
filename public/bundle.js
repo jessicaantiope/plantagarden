@@ -2450,7 +2450,17 @@ var App = function App() {
             ),
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Square2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Vegetables2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Vegetables2.default }),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+                'footer',
+                { className: 'footer' },
+                _react2.default.createElement(
+                    'a',
+                    { href: '/', className: 'button is-link is-rounded', id: 'HomePage' },
+                    'Home'
+                )
+            )
         )
     );
 };
@@ -37630,7 +37640,7 @@ var Vegetables = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { onClick: this.getVegetable },
+                { className: 'margin', onClick: this.getVegetable },
                 _react2.default.createElement(
                     'h1',
                     null,

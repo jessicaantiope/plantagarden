@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactDom from 'react-dom'
+import ReactTooltip from 'react-tooltip'
 
 
 class Vegetables extends React.Component {
@@ -31,10 +33,12 @@ class Vegetables extends React.Component {
     render () {
         return (
                 <div onClick={this.getVegetable}>
-                    <h1>List of vegetables</h1>
-                    <h2>Name and description</h2>
+                    <h1>Select your vegetables:</h1><br/>
                     {this.state.vegetables.map(vegetable => (
-                        <p>{vegetable.name} - {vegetable.description} <img className="veggies" src={vegetable.image} ></img></p>
+                        <a data-tip={vegetable.name + '-' + vegetable.description}>
+                            <img className="veggies" src={vegetable.image} ></img>
+                            <ReactTooltip place="bottom" type="info" globalEventOff='click' /> 
+                        </a>
                         ))
                     }
                 </div>

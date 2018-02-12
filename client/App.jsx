@@ -1,7 +1,7 @@
 import React from 'react'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 
-import Square from './components/GardenBed'
+import Square from './components/Square'
 import Home from './components/Home'
 import Vegetables from './components/Vegetables'
 

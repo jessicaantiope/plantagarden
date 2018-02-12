@@ -24,7 +24,7 @@ class Square extends React.Component {
                                 return (
                                     <tr>
                                         {row.map((cell) => {
-                                            return <td onClick={() => console.log('chicken')}>0
+                                            return <td onClick={() => console.log('chicken')}>
                                             </td>
                                         })}
                                     </tr>

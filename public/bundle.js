@@ -7628,13 +7628,9 @@ var Square = function (_React$Component) {
                                     'tr',
                                     null,
                                     row.map(function (cell) {
-                                        return _react2.default.createElement(
-                                            'td',
-                                            { onClick: function onClick() {
-                                                    return console.log('chicken');
-                                                } },
-                                            '0'
-                                        );
+                                        return _react2.default.createElement('td', { onClick: function onClick() {
+                                                return console.log('chicken');
+                                            } });
                                     })
                                 );
                             })

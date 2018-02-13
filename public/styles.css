@@ -34,18 +34,22 @@
     font-size: 30px;
 }
 
-#vegetableList {
+.container {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .margin {
     margin: 20px;
 }
 .veggies {
-    height: 60px;
-    width: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    height: 90px;
+    width: 90px;
 }
 
 .footer {
@@ -54,6 +58,7 @@
 }
 td {
     background-color:#A0522D;
+    opacity: 80%;
     height: 100px;
     width: 100px;
 }

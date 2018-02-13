@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import ReactTooltip from 'react-tooltip'
+import Plant from './Plant'
 
 
-class Vegetables extends React.Component {
+class PlantList extends React.Component {
     constructor(props) {
         super(props)
+        
         this.state = {
-            vegetables: [
+            plants: [
                 {name: 'Lettuce', description: 'Leafy', image: 'images/lettuce.png'},
                 {name: 'Beetroot', description: 'Red and earthy', image: 'images/beetroot.png'},
                 {name: 'Capsicum', description: 'Refreshing crunch', image: 'images/capsicum.png'},
@@ -19,31 +20,21 @@ class Vegetables extends React.Component {
                 {name: 'Eggplant', description: 'Purple goodness', image: 'images/eggplant.png'},
                 {name: 'Chilli', description: 'Hot', image: 'images/chilli.png'}
             ],
-            selectedVegetables: []
         }
-    //     this.getVegetable = this.getVegetable.bind(this)
-    // }
-    // getVegetable() {
-    //    let {selectedVegetable} = this.state
-    //    if (selectedVegetables.find(selected => selected == vegetables.name)) 
-    //    selectedVegetable = selectedVegetables.filter(selected => selected != vegetables.name)
-    //    else selectedVegetables.push(vegetables.name)
-    //    this.setState({selectedVegetables})
+        console.log(props.callback)
     }
     render () {
         return (
-                <div onClick={this.getVegetable}>
-                    <h1>Select your vegetables:</h1><br/>
-                    {this.state.vegetables.map(vegetable => (
-                        <a data-tip={vegetable.name + '-' + vegetable.description}>
-                            <img className="veggies" src={vegetable.image} ></img>
-                            <ReactTooltip place="bottom" type="info" globalEventOff='click' /> 
-                        </a>
+                <div className="container">
+                    <h1>Select your plants:</h1><br/>
+                    {this.state.plants.map(plant => (
+                        <Plant key={plant.name} data={plant} onClickCallback={this.props.callback}/>
                         ))
                     }
+                    
                 </div>
         )
     }
 }
 
-export default Vegetables
+export default PlantList

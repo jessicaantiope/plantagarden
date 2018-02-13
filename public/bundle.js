@@ -2416,17 +2416,17 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(40);
 
-var _Square = __webpack_require__(69);
+var _Garden = __webpack_require__(235);
 
-var _Square2 = _interopRequireDefault(_Square);
+var _Garden2 = _interopRequireDefault(_Garden);
 
 var _Home = __webpack_require__(80);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Vegetables = __webpack_require__(81);
+var _PlantList = __webpack_require__(234);
 
-var _Vegetables2 = _interopRequireDefault(_Vegetables);
+var _PlantList2 = _interopRequireDefault(_PlantList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2449,8 +2449,17 @@ var App = function App() {
                 )
             ),
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Square2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/square', component: _Vegetables2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/garden', component: _Garden2.default }),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+                'footer',
+                { className: 'footer' },
+                _react2.default.createElement(
+                    'a',
+                    { href: '/', className: 'button is-link is-rounded', id: 'HomePage' },
+                    'Home'
+                )
+            )
         )
     );
 };
@@ -7556,91 +7565,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDataGrid = __webpack_require__(70);
-
-var _reactDataGrid2 = _interopRequireDefault(_reactDataGrid);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Square = function (_React$Component) {
-    _inherits(Square, _React$Component);
-
-    function Square(props) {
-        _classCallCheck(this, Square);
-
-        var _this = _possibleConstructorReturn(this, (Square.__proto__ || Object.getPrototypeOf(Square)).call(this, props));
-
-        _this.state = {
-            garden: [[0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]
-        };
-        return _this;
-    }
-
-    _createClass(Square, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'columns' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'column is-two-thirds' },
-                    _react2.default.createElement(
-                        'table',
-                        { className: 'table is-bordered' },
-                        _react2.default.createElement(
-                            'tbody',
-                            null,
-                            this.state.garden && this.state.garden.map(function (row) {
-                                return _react2.default.createElement(
-                                    'tr',
-                                    null,
-                                    row.map(function (cell) {
-                                        return _react2.default.createElement(
-                                            'td',
-                                            { onClick: function onClick() {
-                                                    return console.log('chicken');
-                                                } },
-                                            '0'
-                                        );
-                                    })
-                                );
-                            })
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Square;
-}(_react2.default.Component);
-
-exports.default = Square;
-
-/***/ }),
+/* 69 */,
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37548,7 +37473,7 @@ var Home = function (_React$Component) {
                     { className: "column" },
                     _react2.default.createElement(
                         "a",
-                        { href: "/#/square", className: "button is-link is-rounded", id: "createApp" },
+                        { href: "/#/garden", className: "button is-link is-rounded", id: "createApp" },
                         "Create your own garden"
                     )
                 ),
@@ -37571,90 +37496,7 @@ var Home = function (_React$Component) {
 exports.default = Home;
 
 /***/ }),
-/* 81 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(13);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactTooltip = __webpack_require__(82);
-
-var _reactTooltip2 = _interopRequireDefault(_reactTooltip);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Vegetables = function (_React$Component) {
-    _inherits(Vegetables, _React$Component);
-
-    function Vegetables(props) {
-        _classCallCheck(this, Vegetables);
-
-        var _this = _possibleConstructorReturn(this, (Vegetables.__proto__ || Object.getPrototypeOf(Vegetables)).call(this, props));
-
-        _this.state = {
-            vegetables: [{ name: 'Lettuce', description: 'Leafy', image: 'images/lettuce.png' }, { name: 'Beetroot', description: 'Red and earthy', image: 'images/beetroot.png' }, { name: 'Capsicum', description: 'Refreshing crunch', image: 'images/capsicum.png' }, { name: 'Carrot', description: 'Crunchy', image: 'images/carrot.png' }, { name: 'Corn', description: 'Yellow and juicy', image: 'images/corn.png' }, { name: 'Zuchinni', description: 'Versitle and green', image: 'images/zuchinni.png' }, { name: 'Tomato', description: 'Red and round', image: 'images/tomato.png' }, { name: 'Brocolli', description: 'Mini trees', image: 'images/broccoli.png' }, { name: 'Eggplant', description: 'Purple goodness', image: 'images/eggplant.png' }, { name: 'Chilli', description: 'Hot', image: 'images/chilli.png' }],
-            selectedVegetables: []
-            //     this.getVegetable = this.getVegetable.bind(this)
-            // }
-            // getVegetable() {
-            //    let {selectedVegetable} = this.state
-            //    if (selectedVegetables.find(selected => selected == vegetables.name)) 
-            //    selectedVegetable = selectedVegetables.filter(selected => selected != vegetables.name)
-            //    else selectedVegetables.push(vegetables.name)
-            //    this.setState({selectedVegetables})
-        };return _this;
-    }
-
-    _createClass(Vegetables, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { onClick: this.getVegetable },
-                _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Select your vegetables:'
-                ),
-                _react2.default.createElement('br', null),
-                this.state.vegetables.map(function (vegetable) {
-                    return _react2.default.createElement(
-                        'a',
-                        { 'data-tip': vegetable.name + '-' + vegetable.description },
-                        _react2.default.createElement('img', { className: 'veggies', src: vegetable.image }),
-                        _react2.default.createElement(_reactTooltip2.default, { place: 'bottom', type: 'info', globalEventOff: 'click' })
-                    );
-                })
-            );
-        }
-    }]);
-
-    return Vegetables;
-}(_react2.default.Component);
-
-exports.default = Vegetables;
-
-/***/ }),
+/* 81 */,
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -39089,6 +38931,439 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = '.__react_component_tooltip{border-radius:3px;display:inline-block;font-size:13px;left:-999em;opacity:0;padding:8px 21px;position:fixed;pointer-events:none;transition:opacity 0.3s ease-out;top:-999em;visibility:hidden;z-index:999}.__react_component_tooltip:before,.__react_component_tooltip:after{content:"";width:0;height:0;position:absolute}.__react_component_tooltip.show{opacity:0.9;margin-top:0px;margin-left:0px;visibility:visible}.__react_component_tooltip.type-dark{color:#fff;background-color:#222}.__react_component_tooltip.type-dark.place-top:after{border-top-color:#222;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-dark.place-bottom:after{border-bottom-color:#222;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-dark.place-left:after{border-left-color:#222;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-dark.place-right:after{border-right-color:#222;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-dark.border{border:1px solid #fff}.__react_component_tooltip.type-dark.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-dark.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-dark.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-dark.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-success{color:#fff;background-color:#8DC572}.__react_component_tooltip.type-success.place-top:after{border-top-color:#8DC572;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-success.place-bottom:after{border-bottom-color:#8DC572;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-success.place-left:after{border-left-color:#8DC572;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-success.place-right:after{border-right-color:#8DC572;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-success.border{border:1px solid #fff}.__react_component_tooltip.type-success.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-success.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-success.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-success.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-warning{color:#fff;background-color:#F0AD4E}.__react_component_tooltip.type-warning.place-top:after{border-top-color:#F0AD4E;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-warning.place-bottom:after{border-bottom-color:#F0AD4E;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-warning.place-left:after{border-left-color:#F0AD4E;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-warning.place-right:after{border-right-color:#F0AD4E;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-warning.border{border:1px solid #fff}.__react_component_tooltip.type-warning.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-warning.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-warning.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-warning.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-error{color:#fff;background-color:#BE6464}.__react_component_tooltip.type-error.place-top:after{border-top-color:#BE6464;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-error.place-bottom:after{border-bottom-color:#BE6464;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-error.place-left:after{border-left-color:#BE6464;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-error.place-right:after{border-right-color:#BE6464;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-error.border{border:1px solid #fff}.__react_component_tooltip.type-error.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-error.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-error.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-error.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-info{color:#fff;background-color:#337AB7}.__react_component_tooltip.type-info.place-top:after{border-top-color:#337AB7;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-info.place-bottom:after{border-bottom-color:#337AB7;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-info.place-left:after{border-left-color:#337AB7;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-info.place-right:after{border-right-color:#337AB7;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-info.border{border:1px solid #fff}.__react_component_tooltip.type-info.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-info.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-info.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-info.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-light{color:#222;background-color:#fff}.__react_component_tooltip.type-light.place-top:after{border-top-color:#fff;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-light.place-bottom:after{border-bottom-color:#fff;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-light.place-left:after{border-left-color:#fff;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-light.place-right:after{border-right-color:#fff;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-light.border{border:1px solid #222}.__react_component_tooltip.type-light.border.place-top:before{border-top:8px solid #222}.__react_component_tooltip.type-light.border.place-bottom:before{border-bottom:8px solid #222}.__react_component_tooltip.type-light.border.place-left:before{border-left:8px solid #222}.__react_component_tooltip.type-light.border.place-right:before{border-right:8px solid #222}.__react_component_tooltip.place-top{margin-top:-10px}.__react_component_tooltip.place-top:before{border-left:10px solid transparent;border-right:10px solid transparent;bottom:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-top:after{border-left:8px solid transparent;border-right:8px solid transparent;bottom:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-bottom{margin-top:10px}.__react_component_tooltip.place-bottom:before{border-left:10px solid transparent;border-right:10px solid transparent;top:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-bottom:after{border-left:8px solid transparent;border-right:8px solid transparent;top:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-left{margin-left:-10px}.__react_component_tooltip.place-left:before{border-top:6px solid transparent;border-bottom:6px solid transparent;right:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-left:after{border-top:5px solid transparent;border-bottom:5px solid transparent;right:-6px;top:50%;margin-top:-4px}.__react_component_tooltip.place-right{margin-left:10px}.__react_component_tooltip.place-right:before{border-top:6px solid transparent;border-bottom:6px solid transparent;left:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-right:after{border-top:5px solid transparent;border-bottom:5px solid transparent;left:-6px;top:50%;margin-top:-4px}.__react_component_tooltip .multi-line{display:block;padding:2px 0px;text-align:center}';
+
+/***/ }),
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */,
+/* 152 */,
+/* 153 */,
+/* 154 */,
+/* 155 */,
+/* 156 */,
+/* 157 */,
+/* 158 */,
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactTooltip = __webpack_require__(82);
+
+var _reactTooltip2 = _interopRequireDefault(_reactTooltip);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Plant = function (_React$Component) {
+    _inherits(Plant, _React$Component);
+
+    function Plant(props) {
+        _classCallCheck(this, Plant);
+
+        var _this = _possibleConstructorReturn(this, (Plant.__proto__ || Object.getPrototypeOf(Plant)).call(this, props));
+
+        var _props$data = props.data,
+            name = _props$data.name,
+            description = _props$data.description,
+            image = _props$data.image;
+
+        _this.state = {
+            name: name,
+            description: description,
+            image: image
+        };
+        return _this;
+    }
+
+    _createClass(Plant, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { onClick: function onClick(e) {
+                        _this2.props.onClickCallback(_this2.props.data);
+                    } },
+                _react2.default.createElement(
+                    'a',
+                    { 'data-tip': this.state.name + '-' + this.state.description },
+                    _react2.default.createElement('img', { className: 'veggies', src: this.state.image }),
+                    _react2.default.createElement(_reactTooltip2.default, { place: 'bottom', type: 'info', globalEventOff: 'click' })
+                )
+            );
+        }
+    }]);
+
+    return Plant;
+}(_react2.default.Component);
+
+exports.default = Plant;
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(13);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Plant = __webpack_require__(233);
+
+var _Plant2 = _interopRequireDefault(_Plant);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlantList = function (_React$Component) {
+    _inherits(PlantList, _React$Component);
+
+    function PlantList(props) {
+        _classCallCheck(this, PlantList);
+
+        var _this = _possibleConstructorReturn(this, (PlantList.__proto__ || Object.getPrototypeOf(PlantList)).call(this, props));
+
+        _this.state = {
+            plants: [{ name: 'Lettuce', description: 'Leafy', image: 'images/lettuce.png' }, { name: 'Beetroot', description: 'Red and earthy', image: 'images/beetroot.png' }, { name: 'Capsicum', description: 'Refreshing crunch', image: 'images/capsicum.png' }, { name: 'Carrot', description: 'Crunchy', image: 'images/carrot.png' }, { name: 'Corn', description: 'Yellow and juicy', image: 'images/corn.png' }, { name: 'Zuchinni', description: 'Versitle and green', image: 'images/zuchinni.png' }, { name: 'Tomato', description: 'Red and round', image: 'images/tomato.png' }, { name: 'Brocolli', description: 'Mini trees', image: 'images/broccoli.png' }, { name: 'Eggplant', description: 'Purple goodness', image: 'images/eggplant.png' }, { name: 'Chilli', description: 'Hot', image: 'images/chilli.png' }]
+        };
+        console.log(props.callback);
+        return _this;
+    }
+
+    _createClass(PlantList, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'container' },
+                _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Select your plants:'
+                ),
+                _react2.default.createElement('br', null),
+                this.state.plants.map(function (plant) {
+                    return _react2.default.createElement(_Plant2.default, { key: plant.name, data: plant, onClickCallback: _this2.props.callback });
+                })
+            );
+        }
+    }]);
+
+    return PlantList;
+}(_react2.default.Component);
+
+exports.default = PlantList;
+
+/***/ }),
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDataGrid = __webpack_require__(70);
+
+var _reactDataGrid2 = _interopRequireDefault(_reactDataGrid);
+
+var _PlantList = __webpack_require__(234);
+
+var _PlantList2 = _interopRequireDefault(_PlantList);
+
+var _reactRouterDom = __webpack_require__(40);
+
+var _Plant = __webpack_require__(233);
+
+var _Plant2 = _interopRequireDefault(_Plant);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Garden = function (_React$Component) {
+    _inherits(Garden, _React$Component);
+
+    function Garden(props) {
+        _classCallCheck(this, Garden);
+
+        var _this = _possibleConstructorReturn(this, (Garden.__proto__ || Object.getPrototypeOf(Garden)).call(this, props));
+
+        _this.state = {
+            garden: [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+            selectedPlant: null
+        };
+
+        _this.setSelectedPlant = _this.setSelectedPlant.bind(_this);
+        _this.getPlantName = _this.getPlantName.bind(_this);
+        _this.setGardenCell = _this.setGardenCell.bind(_this);
+        return _this;
+    }
+
+    _createClass(Garden, [{
+        key: 'setSelectedPlant',
+        value: function setSelectedPlant(plant) {
+            this.setState(function (prevState) {
+                return {
+                    garden: prevState.garden,
+                    selectedPlant: plant
+                };
+            });
+        }
+    }, {
+        key: 'setGardenCell',
+        value: function setGardenCell(x, y, plant) {
+            console.log('OMG ' + x + ' ' + y + ' ' + plant);
+            this.setState(function (prevState) {
+                var updatedRow = prevState.garden[x];
+                updatedRow[y] = plant;
+
+                var updatedGarden = prevState.garden;
+                updatedGarden[x] = updatedRow;
+                return {
+                    garden: updatedGarden,
+                    selectedPlant: prevState.selectedPlant
+                };
+            });
+        }
+    }, {
+        key: 'getPlantName',
+        value: function getPlantName(x, y, plant) {
+            if (plant) {
+                return _react2.default.createElement(_Plant2.default, { key: plant.name, data: plant, onClickCallback: function onClickCallback(plant) {
+                        console.log("Do nothing");
+                    } });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'container' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'column' },
+                    _react2.default.createElement(
+                        'table',
+                        { className: 'table is-bordered' },
+                        _react2.default.createElement(
+                            'tbody',
+                            null,
+                            this.state.garden && this.state.garden.map(function (row, i) {
+                                return _react2.default.createElement(
+                                    'tr',
+                                    { key: 'row-' + i },
+                                    row.map(function (cell, j) {
+                                        return _react2.default.createElement(
+                                            'td',
+                                            { key: 'row-' + i + '-cell-' + j, onClick: function onClick(e) {
+                                                    _this2.setGardenCell(i, j, _this2.state.selectedPlant);
+                                                } },
+                                            _this2.getPlantName(i, j, cell)
+                                        );
+                                    })
+                                );
+                            })
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(_PlantList2.default, { callback: this.setSelectedPlant })
+                )
+            );
+        }
+    }]);
+
+    return Garden;
+}(_react2.default.Component);
+
+exports.default = Garden;
+
+// Create a method on Garden that will accept a plant object and set it to the selectedPlant state
+// Give PlantList the method created above as a callback method
+// Edit PlantList to call the callback method when a user clicks on the "Select Your plants text"
 
 /***/ })
 /******/ ]);

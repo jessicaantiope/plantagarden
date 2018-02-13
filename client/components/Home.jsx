@@ -16,7 +16,7 @@ class Home extends React.Component {
                         <p>Welcome to Plant a Garden.  This is a space for you to plan and create your own vegetable garden.</p>
                 </div>
                 <div className="column">
-                    <a href="/#/square" className="button is-link is-rounded" id="createApp">Create your own garden</a>
+                    <a href="/#/garden" className="button is-link is-rounded" id="createApp">Create your own garden</a>
                 </div>
                 <div className="column" id="gardenPictures">
                     <figure className="image is-250x250">

@@ -16,7 +16,7 @@ const App = () => {
                 <Route path="/garden" component={Garden} />
                 <br/>
                 <footer className="footer">
-                <a href="/" className="button is-link is-rounded" id="HomePage">Home</a>
+                <a href="/" className="button is-link is-rounded" id="homePage">Home</a>
                 </footer>
             </div>
         </Router>

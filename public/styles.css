@@ -33,6 +33,10 @@
     background-color: #00A651;
     font-size: 30px;
 }
+#homePage {
+    background-color: #00A651;
+    font-size: 30px;
+}
 
 .container {
     display: flex;
@@ -54,11 +58,15 @@
 
 .footer {
     background-color: #00A651;
-    margin-top: 10px;
+    height: 30px;
 }
 td {
     background-color:#A0522D;
     opacity: 80%;
     height: 100px;
     width: 100px;
+}
+
+p {
+    font-size: 20px;
 }

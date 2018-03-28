@@ -85,8 +85,3 @@ getPlantName(x, y, plant) {
 }
 
 export default Garden
-
-
-// Create a method on Garden that will accept a plant object and set it to the selectedPlant state
-// Give PlantList the method created above as a callback method
-// Edit PlantList to call the callback method when a user clicks on the "Select Your plants text"
